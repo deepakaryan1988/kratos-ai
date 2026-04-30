@@ -1,0 +1,30 @@
+services:
+  # Mock AWS Infrastructure
+  localstack:
+    # Use version 3.3.0 or 3.4.0 (stable, pre-auth-gate)
+    image: localstack/localstack:3.4.0
+    ports:
+      - "127.0.0.1:4566:4566"
+      - "127.0.0.1:4510-4559:4510-4559"
+    environment:
+      - DEBUG=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - SERVICES=s3,iam,ec2,rds # Enable EC2 and RDS for security scanning
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  # Vector Database for AI Policies
+  postgres-kratos:
+    image: pgvector/pgvector:pg17
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: dev_user
+      POSTGRES_PASSWORD: dev_password
+      POSTGRES_DB: kratos_vault
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+volumes:
+  postgres_data:

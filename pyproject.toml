@@ -1,0 +1,18 @@
+[project]
+name = "kratos-ai"
+version = "0.1.0"
+description = "AI-powered cloud security scanner with architectural remediation recommendations"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "awscli-local>=0.22.2",
+    "boto3>=1.43.0",
+    "langgraph>=1.1.10",
+    "pgvector>=0.4.2",
+    "psycopg2-binary>=2.9.12",
+    "pydantic-ai>=1.88.0",
+    "python-dotenv>=1.2.2",
+    "pytest>=9.0.0",
+    "aiogram>=3.0.0",
+    "requests>=2.33.1",
+]

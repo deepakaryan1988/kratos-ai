@@ -1,0 +1,540 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "kratos_workflow_nodes",
+        "label": "Kratos Workflow Nodes",
+        "nodes": [
+          "main_workflow",
+          "scanner_cloud_scanner_node",
+          "brain_reasoning_node"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.9,
+        "source_file": "main.py"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "app.py",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L1",
+      "id": "app_py",
+      "community": 7,
+      "norm_label": "app.py"
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "id": "main_py",
+      "community": 3,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "id": "kratos_ai_main_main",
+      "community": 3,
+      "norm_label": "main()"
+    },
+    {
+      "label": "state.py",
+      "file_type": "code",
+      "source_file": "agents/state.py",
+      "source_location": "L1",
+      "id": "agents_state_py",
+      "community": 2,
+      "norm_label": "state.py"
+    },
+    {
+      "label": "KratosState",
+      "file_type": "code",
+      "source_file": "agents/state.py",
+      "source_location": "L4",
+      "id": "agents_state_kratosstate",
+      "community": 2,
+      "norm_label": "kratosstate"
+    },
+    {
+      "label": "TypedDict",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "typeddict",
+      "community": 2,
+      "norm_label": "typeddict"
+    },
+    {
+      "label": "brain.py",
+      "file_type": "code",
+      "source_file": "agents/brain.py",
+      "source_location": "L1",
+      "id": "agents_brain_py",
+      "community": 4,
+      "norm_label": "brain.py"
+    },
+    {
+      "label": "reasoning_node()",
+      "file_type": "code",
+      "source_file": "agents/brain.py",
+      "source_location": "L4",
+      "id": "agents_brain_reasoning_node",
+      "community": 4,
+      "norm_label": "reasoning_node()"
+    },
+    {
+      "label": "scanner.py",
+      "file_type": "code",
+      "source_file": "agents/scanner.py",
+      "source_location": "L1",
+      "id": "agents_scanner_py",
+      "community": 5,
+      "norm_label": "scanner.py"
+    },
+    {
+      "label": "cloud_scanner_node()",
+      "file_type": "code",
+      "source_file": "agents/scanner.py",
+      "source_location": "L7",
+      "id": "agents_scanner_cloud_scanner_node",
+      "community": 5,
+      "norm_label": "cloud_scanner_node()"
+    },
+    {
+      "label": "Kratos Engine",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "main_kratos_engine",
+      "community": 6,
+      "norm_label": "kratos engine"
+    },
+    {
+      "label": "StateGraph Workflow",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "main_workflow",
+      "community": 0,
+      "norm_label": "stategraph workflow"
+    },
+    {
+      "label": "KratosState",
+      "file_type": "code",
+      "source_file": "agents/state.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "state_kratosstate",
+      "community": 0,
+      "norm_label": "kratosstate"
+    },
+    {
+      "label": "Cloud Scanner Node",
+      "file_type": "code",
+      "source_file": "agents/scanner.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "scanner_cloud_scanner_node",
+      "community": 0,
+      "norm_label": "cloud scanner node"
+    },
+    {
+      "label": "Reasoning Node",
+      "file_type": "code",
+      "source_file": "agents/brain.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "brain_reasoning_node",
+      "community": 1,
+      "norm_label": "reasoning node"
+    },
+    {
+      "label": "Project Kratos",
+      "file_type": "document",
+      "source_file": "docs/PRD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "prd_kratos",
+      "community": 6,
+      "norm_label": "project kratos"
+    },
+    {
+      "label": "LangGraph",
+      "file_type": "document",
+      "source_file": "docs/PRD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "prd_langgraph",
+      "community": 0,
+      "norm_label": "langgraph"
+    },
+    {
+      "label": "LocalStack",
+      "file_type": "document",
+      "source_file": "docs/PRD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "prd_localstack",
+      "community": 0,
+      "norm_label": "localstack"
+    },
+    {
+      "label": "Qwen 9B",
+      "file_type": "document",
+      "source_file": "docs/PRD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "prd_qwen",
+      "community": 1,
+      "norm_label": "qwen 9b"
+    },
+    {
+      "label": "Claude 3.5 Sonnet",
+      "file_type": "document",
+      "source_file": "docs/PRD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "prd_claude",
+      "community": 8,
+      "norm_label": "claude 3.5 sonnet"
+    },
+    {
+      "label": "PostgreSQL",
+      "file_type": "document",
+      "source_file": "docs/PRD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "prd_postgresql",
+      "community": 9,
+      "norm_label": "postgresql"
+    },
+    {
+      "label": "Sensory Node (Scanner)",
+      "file_type": "document",
+      "source_file": "docs/PRD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "prd_sensory_node",
+      "community": 0,
+      "norm_label": "sensory node (scanner)"
+    },
+    {
+      "label": "Cognitive Node (Brain)",
+      "file_type": "document",
+      "source_file": "docs/PRD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "prd_cognitive_node",
+      "community": 1,
+      "norm_label": "cognitive node (brain)"
+    },
+    {
+      "label": "Remediation Node",
+      "file_type": "document",
+      "source_file": "docs/PRD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "prd_remediation_node",
+      "community": 1,
+      "norm_label": "remediation node"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "main_py",
+      "_tgt": "kratos_ai_main_main",
+      "source": "main_py",
+      "target": "kratos_ai_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/state.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "agents_state_py",
+      "_tgt": "agents_state_kratosstate",
+      "source": "agents_state_py",
+      "target": "agents_state_kratosstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/state.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "agents_state_kratosstate",
+      "_tgt": "typeddict",
+      "source": "agents_state_kratosstate",
+      "target": "typeddict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/brain.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "agents_brain_py",
+      "_tgt": "agents_brain_reasoning_node",
+      "source": "agents_brain_py",
+      "target": "agents_brain_reasoning_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/scanner.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "agents_scanner_py",
+      "_tgt": "agents_scanner_cloud_scanner_node",
+      "source": "agents_scanner_py",
+      "target": "agents_scanner_cloud_scanner_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "main_workflow",
+      "_tgt": "main_kratos_engine",
+      "source": "main_kratos_engine",
+      "target": "main_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "main.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "main_kratos_engine",
+      "_tgt": "prd_kratos",
+      "source": "main_kratos_engine",
+      "target": "prd_kratos"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "main_workflow",
+      "_tgt": "scanner_cloud_scanner_node",
+      "source": "main_workflow",
+      "target": "scanner_cloud_scanner_node"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "main_workflow",
+      "_tgt": "brain_reasoning_node",
+      "source": "main_workflow",
+      "target": "brain_reasoning_node"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "main.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "main_workflow",
+      "_tgt": "prd_langgraph",
+      "source": "main_workflow",
+      "target": "prd_langgraph"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/state.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "state_kratosstate",
+      "_tgt": "main_workflow",
+      "source": "main_workflow",
+      "target": "state_kratosstate"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/state.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "state_kratosstate",
+      "_tgt": "scanner_cloud_scanner_node",
+      "source": "state_kratosstate",
+      "target": "scanner_cloud_scanner_node"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/state.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "state_kratosstate",
+      "_tgt": "brain_reasoning_node",
+      "source": "state_kratosstate",
+      "target": "brain_reasoning_node"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "scanner_cloud_scanner_node",
+      "_tgt": "brain_reasoning_node",
+      "source": "scanner_cloud_scanner_node",
+      "target": "brain_reasoning_node"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "agents/scanner.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "scanner_cloud_scanner_node",
+      "_tgt": "prd_sensory_node",
+      "source": "scanner_cloud_scanner_node",
+      "target": "prd_sensory_node"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agents/scanner.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "scanner_cloud_scanner_node",
+      "_tgt": "prd_localstack",
+      "source": "scanner_cloud_scanner_node",
+      "target": "prd_localstack"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "agents/brain.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "brain_reasoning_node",
+      "_tgt": "prd_cognitive_node",
+      "source": "brain_reasoning_node",
+      "target": "prd_cognitive_node"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agents/brain.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "brain_reasoning_node",
+      "_tgt": "prd_qwen",
+      "source": "brain_reasoning_node",
+      "target": "prd_qwen"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agents/brain.py",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "brain_reasoning_node",
+      "_tgt": "prd_remediation_node",
+      "source": "brain_reasoning_node",
+      "target": "prd_remediation_node"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "kratos_workflow_nodes",
+      "label": "Kratos Workflow Nodes",
+      "nodes": [
+        "main_workflow",
+        "scanner_cloud_scanner_node",
+        "brain_reasoning_node"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "main.py"
+    }
+  ]
+}
