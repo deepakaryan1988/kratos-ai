@@ -6,6 +6,8 @@ def reasoning_node(state: dict):
     print("🧠 KRATOS [Brain]: Analyzing findings with Local Qwen 9B...")
     
     findings_str = "\n".join(state['findings'])
+    anomaly_str = "\n".join([f"- {a['message']} (Risk: {a['risk']})" for a in state.get('anomaly_findings', [])])
+    risk_score = state.get('composite_risk_score', 0.0)
 
     # Find similar past findings
     similar = []
@@ -14,23 +16,29 @@ def reasoning_node(state: dict):
     except Exception:
         pass
 
+    context_str = ""
     if similar:
-        context = "\n".join([f"- {s[0]}: {s[1][:100]}..." for s in similar[:3]])
-        prompt = f"""You are KRATOS, an AI Cloud Architect.
+        context_str = "Previous similar findings and remediations:\n" + \
+                     "\n".join([f"- {s[0]}: {s[1][:100]}..." for s in similar[:3]])
 
-Previous similar findings and remediations:
-{context}
+    prompt = f"""You are KRATOS, an AI Cloud Architect.
+    
+{context_str}
 
-Current security issues:
+SECURITY FINDINGS:
 {findings_str}
 
-Provide an architectural remediation plan building on similar past cases."""
-    else:
-        prompt = f"""You are KRATOS, an AI Cloud Architect.
-    The following security issues were found:
-    {findings_str}
+ANOMALY SIGNALS:
+{anomaly_str}
+COMPOSITE RISK SCORE: {risk_score}/100
 
-    Provide a brief architectural remediation plan and a sample Terraform snippet to fix these."""
+INSTRUCTIONS:
+1. If there is a policy violation, provide Terraform to fix the configuration (e.g. enable encryption).
+2. If there is a CRITICAL anomaly (Risk > 80), prioritize a SHUTDOWN or ISOLATION plan.
+   - For EC2: Generate Terraform to set `instance_state = "stopped"` or remove public routes.
+   - Output valid HCL only.
+3. Provide a brief architectural explanation for your choice.
+"""
 
     # Pointing to your LM Studio Windows Host IP
     url = os.getenv("LOCAL_LLM_URL", "http://172.17.0.1:1234/v1") + "/chat/completions"
@@ -39,7 +47,7 @@ Provide an architectural remediation plan building on similar past cases."""
         response = requests.post(url, json={
             "model": os.getenv("LOCAL_LLM_MODEL", "qwen3.5-9b-claude-4.6-opus-reasoning-distilled-v2"),
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 500
+            "max_tokens": 2000
         }, timeout=120)
         msg = response.json()['choices'][0]['message']
         plan = msg.get('content') or msg.get('reasoning_content', '')

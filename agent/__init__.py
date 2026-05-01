@@ -1,1 +1,0 @@
-# KRATOS Autonomous Agent Package
